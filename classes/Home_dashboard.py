@@ -1,6 +1,4 @@
 from tkinter import *
-
-import self
 import viewcustomer
 
 
@@ -16,7 +14,7 @@ class Home:
     def create_fields(self):
         main_title = Label(self.wn, text="System Dashboard",bg="#d19063", font=("Times New Roman", 16, "underline"),
                            height="2", width="52").grid(row=0, column=2, pady=16)
-        Button(self.wn, text="Add Product", command= self.adproduct(), font=("Times New Roman", 16),
+        Button(self.wn, text="Add Product", command= self.adproduct, font=("Times New Roman", 16),
                bg="#735039", fg="white", activebackground="#735039",
                activeforeground="white", state=ACTIVE,
                width="34", height="2").place(x=90, y=90)
@@ -56,8 +54,9 @@ class Home:
 
 
     def adproduct(self):
-        import add_product
-        add_product.Productview()
+        # import add_product
+        from add_product import ProductView
+        ProductView()
 
     def cusdepage(self):
         import add_customer_details
