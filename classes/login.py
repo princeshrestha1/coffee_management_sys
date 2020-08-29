@@ -42,11 +42,18 @@ class Login:
 
         e2 = Entry(loginwin, show="*", textvariable=pwd_verify, width="40")
         e2.place(x=155, y=235)
-        verifyy = Button(loginwin, text="Verify", width="25", height="2", bg="#735039", fg="white",
-                         activebackground="#735039", activeforeground="white",
-                         state=ACTIVE, command=loginverification)
-        verifyy.place(x=185, y=305)
-        #
+
+        Verify = Button(loginwin, text="Verify", width="25", height="2", bg="#735039", fg="white",
+                         activebackground ="#735039", activeforeground="white",
+                         state =ACTIVE, command=loginverification)
+        Verify.place(x=185, y=305)
+
+        Exit = Button(loginwin, text="Exit", width="25", height="2", command=loginwin.quit, bg="#735039", fg="white",
+                      activebackground="#735039", activeforeground="white",
+                      state=ACTIVE)
+        Exit.place(x=185, y=355)
+
+
         # add = Button(loginwin, text="Add", width="25", height="2", bg="#e6e6e6", fg="#4169E1", activebackground="#4169E1",
         #              activeforeground="white",
         #              state=ACTIVE, command=employee_reg)
@@ -55,7 +62,7 @@ class Login:
         loginwin.mainloop()
 
 
-l1= Login()
+l1 = Login()
 
 
 

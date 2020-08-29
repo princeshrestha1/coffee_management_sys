@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a97bb4b4-8592-4047-bd13-71e1c722a0b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Home_dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Home_dashboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/add_sales.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/add_sales.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/login.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/sale_details.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/sale_details.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/viewcustomer.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/viewcustomer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.login">
+  <component name="RunManager" selected="Python.viewcustomer">
     <configuration name="Home_dashboard" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Coffee Management System" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,7 +96,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="add_product" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="add_sales" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Coffee Management System" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -106,7 +108,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classes/add_product.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classes/add_sales.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.login" />
         <item itemvalue="Python.viewcustomer" />
-        <item itemvalue="Python.add_customer_details" />
-        <item itemvalue="Python.add_product" />
+        <item itemvalue="Python.login" />
         <item itemvalue="Python.Home_dashboard" />
+        <item itemvalue="Python.add_sales" />
+        <item itemvalue="Python.add_customer_details" />
       </list>
     </recent_temporary>
   </component>
@@ -178,6 +180,14 @@
       <option name="presentableId" value="Default" />
       <updated>1598083219817</updated>
     </task>
+    <task id="LOCAL-00001" summary="changes">
+      <created>1598680060846</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598680060846</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,5 +200,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
   </component>
 </project>

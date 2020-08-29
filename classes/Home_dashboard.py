@@ -62,9 +62,8 @@ class Home:
         import add_customer_details
 
     def view_customer(self):
-        new = Tk()
-        viewcustomer.View(new)
-        new.mainloop()
+        viewcustomer.View()
+
 
     def productdetails(self):
         pass
