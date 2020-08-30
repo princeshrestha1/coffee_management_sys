@@ -1,7 +1,7 @@
 '''yesma customer name ra customer number add garni euta frame ma ra arko ma choose product combo box
 ma rakhera add garni, add gares teii tala items added to cart sucesffully message show gari product ra cost show garni ra lastma save order garni btn'''
 
-'''from tkinter import *
+from tkinter import *
 from tkinter import ttk
 from coffee_product import Products
 
@@ -41,4 +41,4 @@ class OrderView:
         self.combo_product['value'] = data
 
 
-OrderView()'''
+OrderView()
