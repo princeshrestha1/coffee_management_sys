@@ -14,7 +14,8 @@ class ProductView:
         self.win.geometry('492x342')
         self.win.config(background="#dabc98")
         self.product = Products()
-        self.row = []
+        self.selected_row = ""
+        # self.row = []
 
         self.label_name = Label(self.win, text="Product Name:", bg="#dabc98")
         self.label_name.grid(row=0, column=0)
@@ -44,19 +45,13 @@ class ProductView:
                                  activebackground="#735039", activeforeground="white")
         self.submit_btn.grid(row=5, column=1)
 
-        self.update_btn = Button(self.win, text="Update Products", command= self.update_product, bg="#735039", fg="white",
+        self.update_btn = Button(self.win, text="Update Products", command=self.update_product, bg="#735039",
+                                 fg="white",
                                  activebackground="#735039", activeforeground="white")
         self.update_btn.grid(row=5, column=0)
 
-        self.test_frame = Frame(self.win, height=500, width=500)
-        self.test_frame.grid(row=4, column=0, columnspan=2)
-        self.yscroll = Scrollbar(self.test_frame, orient=VERTICAL)
-        self.yscroll.pack(side=RIGHT, fill=Y)
-
-
-        self.product_tree = ttk.Treeview(self.win, columns=("name", "type", "cost", "company"), yscrollcommand=self.yscroll.set)
+        self.product_tree = ttk.Treeview(self.win, columns=("name", "type", "cost", "company"))
         self.product_tree.grid(row=6, column=0, columnspan=2)
-        self.yscroll.config(command=self.product_tree.yview)
         self.product_tree['show'] = 'headings'
         self.product_tree.heading("name", text='Name')
         self.product_tree.heading("type", text='Type')
@@ -108,19 +103,18 @@ class ProductView:
         type = self.entry_type.get()
         cost = self.entry_cost.get()
         company = self.entry_company.get()
-        if self.product.update_product(self.selected_row, name, type, cost, company):
+        if self.product.update_products(self.selected_row, name, type, cost, company):
             messagebox.showinfo("Item", "Item Updated")
             self.show_products_tree()
         else:
             messagebox.showerror("Error", "Item cannot be Updated")
-
 
     def show_products_tree(self):
         # product = Products()
         self.product_tree.delete(*self.product_tree.get_children())
         all_products = self.product.show_products()
         for i in all_products:
-            self.product_tree.insert("", "end", text=i[0], values=i(i[1], i[2], i[3], i[4]))
+            self.product_tree.insert("", "end", text=i[0], values=i(i[1], i[2], i[3]))
 
         self.product_tree.bind("<Double-1>", self.on_select)
 
@@ -149,3 +143,5 @@ class ProductView:
     # show_product(n)
     # n.mainloop()
 
+
+ProductView()
