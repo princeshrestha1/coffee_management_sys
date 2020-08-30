@@ -80,23 +80,36 @@ class AddSales:
         self.addButton.place(x=250, y=27)
 
         self.chooseProduct = Label(
+            self.win,
             text="Choose Product", bg="#dabc98"
         )
         self.chooseProduct.place(x=10, y=100)
-        self.products = ['capacuinno', 'espresso', 'latte', 'black']
+        self.products_names = ['capacuinno', 'espresso', 'latte', 'black']
+        self.products = {
+            'capacuinno': ["Capacuinno", "Coffee", '250', 'Nescafe'],
+            'espresso': ["Espresso", "Coffee", '350', 'Company name'],
+            'latte': ["Latte", "Coffee", '150', 'Company name'],
+            'black': ["Black", "Coffee", '160', 'Company name']
+        }
 
-        self.opt = Combobox(self.win, values=self.products, state = 'readonly')
+        self.opt = Combobox(self.win, values=self.products_names, state = 'readonly')
         self.opt.place(x=100, y=100)
 
         self.productAdd = Button(
+            self.win,
             text="Add",
             command=self.productAdd, bg="#735039", fg="white", width=4,
             activebackground="#735039", activeforeground="white"
         )
         self.productAdd.place(x=250, y=97)
+        self.saveButton = Button(
+            self.win,
+            text="Save Order",
+            command=self.saveThisOrder
+        )
+        self.saveButton.place(x=250, y=140)
 
         self.product_tree = ttk.Treeview(self.win, columns=("name", "type", "cost", "company"))
-        # self.product_tree.grid(row=6, column=0, columnspan=2)
         self.product_tree.place(x=0, y=200)
         self.product_tree['show'] = 'headings'
         self.product_tree.heading("name", text='Name')
@@ -108,12 +121,20 @@ class AddSales:
         self.product_tree.column("cost", width=120)
         self.product_tree.column("company", width=120)
 
+
+
+    def saveThisOrder(self):
+        print("yeha db link garnu xa")
+
     def clickButton(self):
         pass
 
     def productAdd(self):
-        print(self.opt.get())
-        self.product_tree.insert("", "end", text="a", values=[self.opt.get(), 'coffee', '200', 'Nescafe'])
+        if self.opt.get() != "":
+            print(self.opt.get())
+            self.product_tree.insert("", "end", text="a", values=self.products[self.opt.get()])
 
+        else:
+            print("error value choose xoina")
 
 AddSales()
