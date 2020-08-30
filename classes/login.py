@@ -139,7 +139,7 @@ def usermanagescreen():
     mainwindow.geometry("870x520+1+1")
     mainwindow.title("Coffee Management System")
     mainwindow.resizable(False, False)
-    mainwindow.config(background="#e0e0e0")
+    mainwindow.config(background="#dabc98")
 
     f1 = Frame(mainwindow, bd=9, relief=RIDGE, bg="#e0e0e0")
     f1.place(x=132, y=100, height=295, width=600)

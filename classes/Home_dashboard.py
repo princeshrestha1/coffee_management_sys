@@ -25,7 +25,7 @@ class Home:
                width="34",
                height="2").place(x=90, y=170)
 
-        Button(self.win, text="Add Sales", font=("Times New Roman", 16), bg="#735039", fg="white",
+        Button(self.win, text="Add Sales", command= self.adsales, font=("Times New Roman", 16), bg="#735039", fg="white",
                activebackground="#735039",
                activeforeground="white", state=ACTIVE,
                width="34",
@@ -63,6 +63,11 @@ class Home:
 
     def view_customer(self):
         viewcustomer.View()
+
+    def adsales(self):
+        from add_sales import AddSales
+        AddSales()
+
 
 
     def productdetails(self):

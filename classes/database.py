@@ -27,7 +27,7 @@ class MyDb:
                         host="localhost",
                         user="root",
                         password="",
-                        database="es19b"
+                        database="coffeemanagementsystem"
                         )
         self.my_cursor = self.my_connection.cursor()
 
