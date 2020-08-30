@@ -4,7 +4,7 @@ ma rakhera add garni, add gares teii tala items added to cart sucesffully messag
 from tkinter import *
 from tkinter import ttk
 from coffee_product import Products
-
+from tkinter.ttk import Combobox
 
 
 class OrderView:
@@ -41,4 +41,63 @@ class OrderView:
         self.combo_product['value'] = data
 
 
-OrderView()
+class AddSales:
+    def __init__(self):
+        self.win = Tk()
+        self.win.title('Order Products')
+        self.win.geometry('500x320')
+        self.draw_components()
+        self.win.mainloop()
+
+    def draw_components(self):
+        self.__name = ""
+        self.name = Entry(
+            self.win,
+            textvariable=self.__name,
+        )
+        self.name.place(x=10, y=10)
+
+        self.addButton = Button(
+            self.win,
+            text="Add",
+            command=self.clickButton
+        )
+        self.addButton.place(x=150, y=10)
+
+        self.chooseProduct = Label(
+            text="Choose Product"
+        )
+        self.chooseProduct.place(x=10,y=100)
+        self.products = ['milk coffee', 'black coffee']
+
+        self.opt = Combobox(self.win, values=self.products)
+        self.opt.place(x=100, y=100)
+
+        self.productAdd = Button(
+            text="Add",
+            command=self.productAdd
+        )
+        self.productAdd.place(x=200, y=100)
+        self.product_tree = ttk.Treeview(self.win, columns=("name", "type", "cost", "company"))
+        # self.product_tree.grid(row=6, column=0, columnspan=2)
+        self.product_tree.place(x=0,y=200)
+        self.product_tree['show'] = 'headings'
+        self.product_tree.heading("name", text='Name')
+        self.product_tree.heading("type", text='Type')
+        self.product_tree.heading("cost", text='Cost')
+        self.product_tree.heading("company", text='Company')
+        self.product_tree.column("name", width=120)
+        self.product_tree.column("type", width=120)
+        self.product_tree.column("cost", width=120)
+        self.product_tree.column("company", width=120)
+
+    def clickButton(self):
+        pass
+
+    def productAdd(self):
+        print(self.opt.get())
+        self.product_tree.insert("", "end", text="a", values=[self.opt.get(), 'coffee', '200', 'Nescafe'])
+
+
+
+AddSales()
