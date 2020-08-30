@@ -11,7 +11,7 @@ frame1 = Frame(mywindowd)
 frame1.config(height=650, width=560, background="#e0e0e0")
 frame1.place(x=0, y=0)
 
-main_title1 = Label(frame1, text="Employee Register Form", font=("Times New Roman", 16, "underline"), bg="#d19063",
+main_title1 = Label(frame1, text="Customer Details Form", font=("Times New Roman", 16, "underline"), bg="#d19063",
                     fg="white", width="42",
                     height="2").place(x=25, y=30)
 

@@ -7,8 +7,10 @@ class View:
     """ View
             This class is declared for vieweing the details of customer
     """
-    def __init__(self, window):
-        self.wn = window
+    def __init__(self):
+        mainwindow = Tk()
+        mainwindow.config(background="#e0e0e0")
+        self.wn = mainwindow
         self.wn.geometry('480x200+500+300')
         self.wn.title("Show Customer")
         self.wn.resizable(False, False)
@@ -64,6 +66,6 @@ class View:
             y += 40
             count += 1
 
-        new.mainloop()
+
 
 
