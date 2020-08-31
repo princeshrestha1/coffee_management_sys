@@ -114,7 +114,9 @@ class ProductView:
         self.product_tree.delete(*self.product_tree.get_children())
         all_products = self.product.show_products()
         for i in all_products:
-            self.product_tree.insert("", "end", text=i[0], values=i(i[1], i[2], i[3]))
+            print(i)
+            print(type(i))
+            self.product_tree.insert("", "end", text=i[0], values=i)
 
         self.product_tree.bind("<Double-1>", self.on_select)
 

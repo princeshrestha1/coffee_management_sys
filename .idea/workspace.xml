@@ -4,7 +4,7 @@
     <list default="true" id="a97bb4b4-8592-4047-bd13-71e1c722a0b2" name="Default Changelist" comment="nh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/add_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/add_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/coffee_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/coffee_product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/add_sales.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/add_sales.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,10 +162,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.add_product" />
-        <item itemvalue="Python.coffee_product" />
         <item itemvalue="Python.add_sales" />
-        <item itemvalue="Python.database" />
         <item itemvalue="Python.login" />
+        <item itemvalue="Python.coffee_product" />
+        <item itemvalue="Python.database" />
       </list>
     </recent_temporary>
   </component>

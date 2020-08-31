@@ -84,12 +84,12 @@ class AddSales:
             text="Choose Product", bg="#dabc98"
         )
         self.chooseProduct.place(x=10, y=100)
-        self.products_names = ['capacuinno', 'espresso', 'latte', 'black']
+        self.products_names = ['capacuino', 'espresso', 'Black', 'black']
         self.products = {
-            'capacuinno': ["Capacuinno", "Coffee", '250', 'Nescafe'],
-            'espresso': ["Espresso", "Coffee", '350', 'Company name'],
-            'latte': ["Latte", "Coffee", '150', 'Company name'],
-            'black': ["Black", "Coffee", '160', 'Company name']
+            'capacuino': ["capacuino", "coffee", '480', 'lavazza'],
+            'espresso': ["espresso", "coffee", '450', 'nescafe'],
+            'Black': ["black", "coffee", '470', 'maxwell'],
+            'black': ["black", "coffee", '380', 'maxwell']
         }
 
         self.opt = Combobox(self.win, values=self.products_names, state = 'readonly')
