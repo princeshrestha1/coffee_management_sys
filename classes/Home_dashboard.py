@@ -5,7 +5,7 @@ import viewcustomer
 class Home:
     def __init__(self, window):
         self.win = window
-        self.win.geometry("600x575")
+        self.win.geometry("600x565")
         self.win.title("Coffee Management System Dashboard")
         self.win.resizable(False, False)
         self.win.config(background="#e0e0e0")
@@ -17,7 +17,7 @@ class Home:
         Button(self.win, text="Add Product", command= self.adproduct, font=("Times New Roman", 16),
                bg="#735039", fg="white", activebackground="#735039",
                activeforeground="white", state=ACTIVE,
-               width="34", height="2").place(x=90, y=90)
+               width="34", height="2").place(x=90, y=100)
 
 
         Button(self.win, text="Add Sales", command= self.adsales, font=("Times New Roman", 16), bg="#735039", fg="white",
@@ -25,7 +25,7 @@ class Home:
                activeforeground="white", state=ACTIVE,
                width="34",
                height="2").place(x=90,
-                                 y=170)  # add_sales bata sales garna sakne window banaunxau jasma customer name ra id details add garinxa,
+                                 y=180)  # add_sales bata sales garna sakne window banaunxau jasma customer name ra id details add garinxa,
         # then add garesi arko win khulxa ra tesma choose product option aaunxa , choose garesi automatically sab product details tree view ma show hunxa
         # ra save order button rakhnu parxa, save order click garesii yo products haru databse ma store hunuparxa
 
@@ -33,19 +33,19 @@ class Home:
                activebackground="#735039",
                activeforeground="white", state=ACTIVE,
                width="34",
-               height="2").place(x=90, y=250)
+               height="2").place(x=90, y=260)
         # sales details choose garesi sab customer ko sales record with their order tree view ma show hune ra each ko view order action button rakhne
         # jasle tyo customer ko order haru view hos another win ma with total cost
         Button(self.win, text="Add Customer", command= self.cusdepage, font=("Times New Roman", 16), bg="#735039", fg="white",
                activebackground="#735039",
                activeforeground="white", state=ACTIVE,
                width="34",
-               height="2").place(x=90, y=330)
+               height="2").place(x=90, y=340)
         Button(self.win, text="View Customers", command= self.view_customer, font=("Times New Roman", 16), bg="#735039", fg="white",
                activebackground="#735039",
                activeforeground="white", state=ACTIVE,
                width="34",
-               height="2").place(x=90, y=410)
+               height="2").place(x=90, y=420)
 
 
     def adproduct(self):
@@ -62,6 +62,11 @@ class Home:
     def adsales(self):
         from add_sales import AddSales
         AddSales()
+
+
+
+
+
 
 
 

@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a97bb4b4-8592-4047-bd13-71e1c722a0b2" name="Default Changelist" comment="nh">
-      <change afterPath="$PROJECT_DIR$/classes/customers.py" afterDir="false" />
+    <list default="true" id="a97bb4b4-8592-4047-bd13-71e1c722a0b2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/class-1.0.0-py3.7.egg-info/PKG-INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/class-1.0.0-py3.7.egg-info/SOURCES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/class-1.0.0-py3.7.egg-info/dependency_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/class-1.0.0-py3.7.egg-info/installed-files.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/class-1.0.0-py3.7.egg-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/classPrac.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/Home_dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Home_dashboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/add_customer_details.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/add_customer_details.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/add_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/add_product.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/add_sales.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/add_sales.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/product_details.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/viewcustomer.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/viewcustomer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/users.py" afterDir="false" />
     </list>
@@ -58,8 +66,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.customers">
-    <configuration name="add_customer_details" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.login">
+    <configuration name="Home_dashboard" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Coffee Management System" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,7 +79,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classes/add_customer_details.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classes/Home_dashboard.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -101,7 +109,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="customers" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="add_sales" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Coffee Management System" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -113,28 +121,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classes/customers.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="database" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Coffee Management System" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/classes" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classes/database.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classes/add_sales.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -164,13 +151,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="users" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Coffee Management System" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/users" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/users/users.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.customers" />
-        <item itemvalue="Python.add_customer_details" />
         <item itemvalue="Python.login" />
-        <item itemvalue="Python.database" />
+        <item itemvalue="Python.add_sales" />
+        <item itemvalue="Python.Home_dashboard" />
         <item itemvalue="Python.add_product" />
+        <item itemvalue="Python.users" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598692558588</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="nh">
+      <created>1598879903154</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1598879903154</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

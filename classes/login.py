@@ -104,7 +104,7 @@ def wrongpassword():
     wrongpasscodewin = Toplevel(loginwin)
     wrongpasscodewin.title("Success")
     wrongpasscodewin.geometry("150x100")
-    Label(wrongpasscodewin, text="Invalid Password ").pack()
+    Label(wrongpasscodewin, text="Invalid Password").pack()
     Button(wrongpasscodewin, text="OK", command=deletewrongpassword).pack()
 
 def usernotregistered():

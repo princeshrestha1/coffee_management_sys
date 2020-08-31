@@ -11,6 +11,7 @@ class ProductView:
     def __init__(self):
         self.win = Tk()
         self.win.title("Add Coffee Product")
+        self.win.resizable(False, False)
         self.win.geometry('492x342')
         self.win.config(background="#dabc98")
         self.product = Products()
