@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a97bb4b4-8592-4047-bd13-71e1c722a0b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/class-1.0.0-py3.7.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/class-1.0.0-py3.7.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/class-1.0.0-py3.7.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/class-1.0.0-py3.7.egg-info/installed-files.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/class-1.0.0-py3.7.egg-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/classPrac.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/Home_dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Home_dashboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/add_customer_details.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/add_customer_details.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/add_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/add_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/add_sales.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/add_sales.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/product_details.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/viewcustomer.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/viewcustomer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/coffee_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/coffee_product.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.login">
+  <component name="RunManager" selected="Python.add_product">
     <configuration name="Home_dashboard" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Coffee Management System" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,10 +161,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.add_product" />
         <item itemvalue="Python.login" />
         <item itemvalue="Python.add_sales" />
         <item itemvalue="Python.Home_dashboard" />
-        <item itemvalue="Python.add_product" />
         <item itemvalue="Python.users" />
       </list>
     </recent_temporary>
@@ -228,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598879903154</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="minor changes done">
+      <created>1598884039980</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1598884039980</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,6 +243,7 @@
     <MESSAGE value="changes" />
     <MESSAGE value="Merge branch 'master' of https://github.com/princeshrestha1/coffee_management_sys into master&#10;&#10;# Conflicts:&#10;#&#9;classes/add_sales.py" />
     <MESSAGE value="nh" />
-    <option name="LAST_COMMIT_MESSAGE" value="nh" />
+    <MESSAGE value="minor changes done" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes done" />
   </component>
 </project>

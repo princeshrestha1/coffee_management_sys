@@ -71,6 +71,9 @@ class ProductView:
         selected_row = self.product_tree.selection()[0]
         self.selected_row = self.product_tree.products(selected_row, 'text')
         selected_data = self.product_tree.products(selected_row, 'values')
+        index = product_tree.index(selected_row)
+        all_product = product.show_products()
+        selected_row= all_product[index]
         # selected_product = all_product[row[-1]]
         self.entry_name.delete(0, END)
         self.entry_name.insert(0, selected_data[0])
@@ -109,6 +112,10 @@ class ProductView:
             self.show_products_tree()
         else:
             messagebox.showerror("Error", "Item cannot be Updated")
+
+    def delete_products(self):
+        pass
+        ''''garnu parne xa'''
 
     def show_products_tree(self):
         # product = Products()

@@ -26,5 +26,8 @@ class Products:
         return True
 
     def delete_products(self):
-        pass
+        qry = "DELETE FROM products WHERE "
+        values = (name, type, cost, company, row)
+        self.my_db.iud(qry, values)
+        return True
 
