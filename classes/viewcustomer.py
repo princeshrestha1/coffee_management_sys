@@ -22,7 +22,7 @@ class View:
 
     def allcustomers_window(self):
         self.search_id = StringVar(self.wn)
-        Label(self.wn, text="Enter Customer ID", font=("Times New Roman", 16)).place(x=30, y=49)
+        Label(self.wn, text="Enter Customer ID", font=("Times New Roman", 16), bg="#e0e0e0").place(x=30, y=49)
         Entry(self.wn, text="Enter ID", textvariable=self.search_id, font=("Times New Roman", 16),width=24).place(x=28, y=100)
         Button(self.wn, text="Search", font=("Times New Roman", 16, "underline"),  bg="#735039", fg="white",
                activebackground="#735039",
@@ -65,6 +65,7 @@ class View:
             Label(new, text=details, font=("Times New Roman", 16)).place(x=220,y=y)
             y += 40
             count += 1
+
 
 
 

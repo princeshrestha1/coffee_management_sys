@@ -19,18 +19,13 @@ class Home:
                activeforeground="white", state=ACTIVE,
                width="34", height="2").place(x=90, y=90)
 
-        Button(self.win, text="Product Details", command=self.productdetails, font=("Times New Roman", 16), bg="#735039",
-               fg="white", activebackground="#735039",
-               activeforeground="white", state=ACTIVE,
-               width="34",
-               height="2").place(x=90, y=170)
 
         Button(self.win, text="Add Sales", command= self.adsales, font=("Times New Roman", 16), bg="#735039", fg="white",
                activebackground="#735039",
                activeforeground="white", state=ACTIVE,
                width="34",
                height="2").place(x=90,
-                                 y=250)  # add_sales bata sales garna sakne window banaunxau jasma customer name ra id details add garinxa,
+                                 y=170)  # add_sales bata sales garna sakne window banaunxau jasma customer name ra id details add garinxa,
         # then add garesi arko win khulxa ra tesma choose product option aaunxa , choose garesi automatically sab product details tree view ma show hunxa
         # ra save order button rakhnu parxa, save order click garesii yo products haru databse ma store hunuparxa
 
@@ -38,19 +33,19 @@ class Home:
                activebackground="#735039",
                activeforeground="white", state=ACTIVE,
                width="34",
-               height="2").place(x=90, y=330)
+               height="2").place(x=90, y=250)
         # sales details choose garesi sab customer ko sales record with their order tree view ma show hune ra each ko view order action button rakhne
         # jasle tyo customer ko order haru view hos another win ma with total cost
         Button(self.win, text="Add Customer", command= self.cusdepage, font=("Times New Roman", 16), bg="#735039", fg="white",
                activebackground="#735039",
                activeforeground="white", state=ACTIVE,
                width="34",
-               height="2").place(x=90, y=410)
+               height="2").place(x=90, y=330)
         Button(self.win, text="View Customers", command= self.view_customer, font=("Times New Roman", 16), bg="#735039", fg="white",
                activebackground="#735039",
                activeforeground="white", state=ACTIVE,
                width="34",
-               height="2").place(x=90, y=490)
+               height="2").place(x=90, y=410)
 
 
     def adproduct(self):
@@ -70,7 +65,5 @@ class Home:
 
 
 
-    def productdetails(self):
-        pass
 
 

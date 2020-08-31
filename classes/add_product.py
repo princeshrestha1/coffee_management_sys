@@ -45,7 +45,7 @@ class ProductView:
                                  activebackground="#735039", activeforeground="white")
         self.submit_btn.grid(row=5, column=1)
 
-        self.update_btn = Button(self.win, text="Update Products", command=self.update_product, bg="#735039",
+        self.update_btn = Button(self.win, text="Update Products", command=self.update_products, bg="#735039",
                                  fg="white",
                                  activebackground="#735039", activeforeground="white")
         self.update_btn.grid(row=5, column=0)
@@ -98,7 +98,7 @@ class ProductView:
             else:
                 messagebox.showinfo("Error", "Products are not submitted")
 
-    def update_product(self):
+    def update_products(self):
         name = self.entry_name.get()
         type = self.entry_type.get()
         cost = self.entry_cost.get()
@@ -114,9 +114,9 @@ class ProductView:
         self.product_tree.delete(*self.product_tree.get_children())
         all_products = self.product.show_products()
         for i in all_products:
-            print(i)
-            print(type(i))
-            self.product_tree.insert("", "end", text=i[0], values=i)
+            #print(i)
+            #print(type(i))
+            self.product_tree.insert("", "end", text=i[0], values=(i[1], i[2], i[4],i[3]))
 
         self.product_tree.bind("<Double-1>", self.on_select)
 

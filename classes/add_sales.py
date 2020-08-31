@@ -66,7 +66,7 @@ class AddSales:
         )
         self.name.place(x=105, y=30)
 
-        self.customer = Label(
+        self.customer = Label(self.win,
             text="Customer Name", bg="#dabc98"
         )
         self.customer.place(x=10, y=30)
@@ -105,7 +105,8 @@ class AddSales:
         self.saveButton = Button(
             self.win,
             text="Save Order",
-            command=self.saveThisOrder
+            command=self.saveThisOrder, bg="#735039", fg="white", width=8,
+            activebackground="#735039", activeforeground="white"
         )
         self.saveButton.place(x=250, y=140)
 
@@ -137,4 +138,4 @@ class AddSales:
         else:
             print("error value choose xoina")
 
-AddSales()
+

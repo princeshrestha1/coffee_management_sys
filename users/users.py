@@ -1,4 +1,4 @@
-from classes.connection import *
+from classes.database import *
 
 class User:
 

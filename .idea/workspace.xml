@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a97bb4b4-8592-4047-bd13-71e1c722a0b2" name="Default Changelist" comment="nh">
+      <change afterPath="$PROJECT_DIR$/classes/customers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Home_dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Home_dashboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/add_customer_details.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/add_customer_details.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/add_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/add_product.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/add_sales.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/add_sales.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/viewcustomer.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/viewcustomer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/users.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +58,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.add_product">
+  <component name="RunManager" selected="Python.customers">
+    <configuration name="add_customer_details" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Coffee Management System" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/classes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classes/add_customer_details.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="add_product" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Coffee Management System" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,7 +101,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="add_sales" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="customers" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Coffee Management System" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -87,28 +113,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classes/add_sales.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="coffee_product" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Coffee Management System" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/classes" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classes/coffee_product.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classes/customers.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -161,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.add_product" />
-        <item itemvalue="Python.add_sales" />
+        <item itemvalue="Python.customers" />
+        <item itemvalue="Python.add_customer_details" />
         <item itemvalue="Python.login" />
-        <item itemvalue="Python.coffee_product" />
         <item itemvalue="Python.database" />
+        <item itemvalue="Python.add_product" />
       </list>
     </recent_temporary>
   </component>
