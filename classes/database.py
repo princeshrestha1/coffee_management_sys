@@ -47,5 +47,3 @@ class MyDb:
         except Exception as e:
             print(e)
             return data
-
-
