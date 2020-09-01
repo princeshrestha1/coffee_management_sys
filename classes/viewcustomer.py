@@ -68,3 +68,6 @@ class View:
             Label(new, text=details, font=("Times New Roman", 16)).place(x=220, y=y)
             y += 40
             count += 1
+
+
+

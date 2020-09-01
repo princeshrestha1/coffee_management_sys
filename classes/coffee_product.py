@@ -20,14 +20,14 @@ class Products:
         return products_data
 
     def update_products(self, row, name, type, cost, company):
-        qry = "UPDATE products SET name = %s, type = %s, cost = %s, company = % WHERE id = %s"
+        qry = "UPDATE products SET name = %s, type = %s, cost = %s, company = %s WHERE id = %s"
         values = (name, type, cost, company, row)
         self.my_db.iud(qry, values)
         return True
 
-    def delete_products(self):
-        qry = "DELETE FROM products WHERE "
-        values = (name, type, cost, company, row)
+    def delete_products(self,row):
+        qry = "DELETE FROM products WHERE id=%s"
+        values = (row,)
         self.my_db.iud(qry, values)
         return True
 
