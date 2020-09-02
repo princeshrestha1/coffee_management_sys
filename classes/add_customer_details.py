@@ -102,4 +102,6 @@ reset = Button(mywindowd, text='Reset', width="15", height="2", command=settozer
                state=ACTIVE)
 reset.place(x=410, y=500)
 
+mywindowd.mainloop()
+
 

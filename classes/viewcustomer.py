@@ -1,6 +1,7 @@
 from tkinter import Tk
 from tkinter import *
 from tkinter import messagebox
+import pymysql
 
 
 class View:
@@ -16,11 +17,24 @@ class View:
         self.wn.title("Show Customer")
         self.wn.resizable(False, False)
         self.customer_details = []
-        with open(
-                "C:\\Users\\User\\PycharmProjects\\CoffeeShopManagementSystem\\classes\\customer_details.txt") as show_customer:
-            for lines in show_customer:
-                self.customer_details.append(lines.split(","))
+        self.my_connection = pymysql.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="coffeemanagementsystem"
+        )
+        sql = "select * from customer_details"
+        self.my_cursor = self.my_connection.cursor()
+        self.my_cursor.execute(sql)
+        results = self.my_cursor.fetchall()
+        # print(results)
+        for i in results:
+            # print(i)
+            self.customer_details.append(i)
+
+        # print(self.customer_details)
         self.allcustomers_window()
+        self.wn.mainloop()
 
     def allcustomers_window(self):
         self.search_id = StringVar(self.wn)
@@ -29,16 +43,16 @@ class View:
                                                                                                                    y=100)
         Button(self.wn, text="Search", font=("Times New Roman", 16, "underline"), bg="#735039", fg="white",
                activebackground="#735039",
-               activeforeground="white", command=self.search_employee, width=10).place(x=300, y=92)
+               activeforeground="white", command=self.search_customer, width=10).place(x=300, y=92)
 
-    def search_employee(self):
+    def search_customer(self):
+        print("in customer details")
+        # print(self.customer_details)
         i = 0
         for customer in self.customer_details:
-            print(self.search_id.get())
-            print(customer[0])
-            if self.search_id.get() == customer[0]:
+            if str(self.search_id.get()) == str(customer[0]):
                 self.create_new_win(customer)
-                break
+                exit(0)
             else:
                 i += 1
         else:
@@ -47,27 +61,33 @@ class View:
     def create_new_win(self, customer):
         new = Tk()
         new.title("Customer Details")
-        new.geometry('600x450')
-        new.config(background="#e0e0e0")
+        new.geometry('600x350')
+        new.config(background="#dabc98")
 
         main_title = Label(new, text="Details About Customer", font=("Times New Roman", 16, "underline"),
-                           bg="#4169E1",
-                           fg="white", width="46",
+                           bg="#d19063",
+                           fg="white",
+                           activeforeground="white"
+                           , width="46",
                            height="2").place(x=18, y=20)
 
         details_line = ['Customer ID', 'Name', 'Email', 'Contact']
         y = 100
         count = 0
         for details in customer:
-            Label(new, text=details_line[count], font=("Times New Roman", 16), bg="#e6e6e6", fg="#4169E1",
-                  activebackground="#4169E1", activeforeground="white",
-                  state=ACTIVE, width=15).place(x=10, y=y)
-            Label(new, text=":", font=("Times New Roman", 16), bg="#e6e6e6", fg="#4169E1",
-                  activebackground="#4169E1", activeforeground="#000000",
-                  state=ACTIVE).place(x=170, y=y)
-            Label(new, text=details, font=("Times New Roman", 16)).place(x=220, y=y)
-            y += 40
+            Label(new, text=details_line[count], font=("Times New Roman", 16), bg="#735039", fg="white",
+                  activebackground="#735039",
+                  activeforeground="white",
+                  state=ACTIVE, width=15).place(x=40, y=y)
+            Label(new, text=":", font=("Times New Roman", 16), bg="#735039", fg="white",
+                  activebackground="#735039",
+                  activeforeground="white",
+                  state=ACTIVE).place(x=200, y=y)
+            Label(new, text=details, font=("Times New Roman", 16), bg="#dabc98").place(x=250, y=y)
+            y += 55
             count += 1
+
+        new.mainloop()
 
 
 

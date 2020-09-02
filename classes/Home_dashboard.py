@@ -1,6 +1,6 @@
 from tkinter import *
 import viewcustomer
-
+import view_sales
 
 class Home:
     def __init__(self, window):
@@ -29,7 +29,7 @@ class Home:
         # then add garesi arko win khulxa ra tesma choose product option aaunxa , choose garesi automatically sab product details tree view ma show hunxa
         # ra save order button rakhnu parxa, save order click garesii yo products haru databse ma store hunuparxa
 
-        Button(self.win, text="Sale Details", font=("Times New Roman", 16), bg="#735039", fg="white",
+        Button(self.win, text="View Sales", command=self.viewsale, font=("Times New Roman", 16), bg="#735039", fg="white",
                activebackground="#735039",
                activeforeground="white", state=ACTIVE,
                width="34",
@@ -62,6 +62,10 @@ class Home:
     def adsales(self):
         from add_sales import AddSales
         AddSales()
+
+    def viewsale(self):
+        view_sales.SaleDetails()
+
 
 
 
