@@ -39,4 +39,4 @@ class qry():
         b = self.my_db.iud(qry, values)
 
 
-a = qry()
+prince = qry()

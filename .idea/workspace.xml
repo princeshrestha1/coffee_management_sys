@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a97bb4b4-8592-4047-bd13-71e1c722a0b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/Home_dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Home_dashboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/add_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/add_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/add_sales.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/add_sales.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/customers.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/customers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/main_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/main_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/view_sales.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/view_sales.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/qry_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/qry_testing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/test1.py" afterDir="false" />
     </list>
@@ -63,6 +56,27 @@
     </option>
   </component>
   <component name="RunManager" selected="Python tests.Unittests for test1.MyTestCase">
+    <configuration name="qry_testing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Coffee Management System" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testing/qry_testing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for test1.MyTestCase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Coffee Management System" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -88,20 +102,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test1.MyTestCase.test_add_customer&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for test1.MyTestCase.test_delete_order" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="Coffee Management System" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testing" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test1.MyTestCase.test_delete_order&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -136,10 +136,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Unittests for test1.MyTestCase" />
+        <item itemvalue="Python.qry_testing" />
         <item itemvalue="Python tests.Unittests for test1.MyTestCase.test_show_product" />
         <item itemvalue="Python tests.Unittests for test1.MyTestCase.test_add_customer" />
         <item itemvalue="Python tests.Unittests for test1.MyTestCase.test_show_products" />
-        <item itemvalue="Python tests.Unittests for test1.MyTestCase.test_delete_order" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599206443145</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="done">
+      <created>1599225670139</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1599225670139</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +232,7 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/princeshrestha1/coffee_management_sys into master&#10;&#10;# Conflicts:&#10;#&#9;classes/add_sales.py" />
     <MESSAGE value="nh" />
     <MESSAGE value="minor changes done" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes done" />
+    <MESSAGE value="done" />
+    <option name="LAST_COMMIT_MESSAGE" value="done" />
   </component>
 </project>

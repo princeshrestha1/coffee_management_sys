@@ -10,7 +10,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(expected_result,1)
 
     def test_add_customers(self):
-        expected_result = self.test.add_customer(9, "rihan", "rihanmail@123", 985689452)
+        expected_result = self.test.add_customer(10, "anushka", "anushkamail@123", 985689452)
         self.assertTrue(expected_result)
 
     def test_delete_order(self):
