@@ -1,4 +1,4 @@
-from database import *
+from classes.database import *
 
 
 class Customer:

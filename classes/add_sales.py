@@ -18,12 +18,12 @@ class AddSales:
         self.win.resizable(False, False)
         self.win.geometry('486x430')
         self.win.config(background="#dabc98")
+        self.orders = []
         self.draw_components()
         self.win.mainloop()
 
+
     def draw_components(self):
-        #self.__name = ""
-        #self.name = Entry(self.win,textvariable=self.__name, width=22)
 
         self.name = Entry(
             self.win, width=22)
@@ -48,14 +48,15 @@ class AddSales:
             text="Choose Product", bg="#dabc98"
         )
         self.chooseProduct.place(x=10, y=100)
-        self.products_names = ['espresso','capacuino', 'black', 'latte', 'mocha','macchiato']
+        self.products_names = ['espresso','capacuino', 'black', 'latte', 'mocha','macchiato', 'flat white']
         self.products = {
             'espresso': ["espresso", "coffee", '450', 'nescafe'],
             'capacuino': ["capacuino", "coffee", '480', 'lavazza'],
             'black': ["black", "coffee", '380', 'maxwell'],
             'latte': ["latte", "coffee", '420', 'caribou'],
             'mocha': ["mocha", "coffee", '510', 'tim horton'],
-            'macchiato': ["macchiato", "coffee", '520', 'folger classic']
+            'macchiato': ["macchiato", "coffee", '518', 'folger classic'],
+            'flat white': ["flat white", "coffee", '520', 'folger classic']
 
 
         }
@@ -64,17 +65,17 @@ class AddSales:
         self.opt = Combobox(self.win,textvariable=self.selected, values=self.products_names, state='readonly')
         self.opt.place(x=100, y=100)
 
-        self.productAdd = Button(
+        self.addbtn = Button(
             self.win,
             text="Add To the Cart",
             command=self.productAdd, bg="#735039", fg="white", width=14,
             activebackground="#735039", activeforeground="white"
         )
-        self.productAdd.place(x=250, y=97)
+        self.addbtn.place(x=250, y=97)
         self.saveButton = Button(
             self.win,
             text="Save Order",
-            command=self.saveThisOrder, bg="#735039", fg="white", width=8,
+            command=self.add_order, bg="#735039", fg="white", width=8,
             activebackground="#735039", activeforeground="white"
         )
         self.saveButton.place(x=250, y=140)
@@ -94,45 +95,36 @@ class AddSales:
     def db(self):
         self.my_db = MyDb()
 
-    def add_order(self, order_id, name, type, company, cost):
-        qry = "INSERT INTO order_products (order_id,name, type, comapany, cost) VALUES (%s,%s,%s,%s,%s)"
-        values = (order_id, name, type, company, cost)
-        if self.my_db.iud(qry, values):
-            return True
-        else:
-            return False
-
-    def saveThisOrder(self):
-        #print(self.selected)
-
-
-        #order_id = customer_id_entry.get()
-        #name = customer_name_entry.get()
-        #type = email_entry.get()
-        #cost = contact_entry.get()
+    def add_order(self):
+        self.db()
         customer_name = self.name.get()
+        qry = "INSERT INTO orders (name, products, type, cost, company) VALUES (%s,%s,%s,%s,%s)"
+        for i in self.orders:
 
-        self.orders = []
-
-        if self.clickButton():
-            for line in self.product_tree.get_children():
-                order = []
-                for value in self.product_tree.item(line)['values']:
-                    order.append(value)
-                    self.orders.append(order)
-            if self.add_order(order_id, name, type, company, cost)= self.orders :
-                messagebox.showinfo("Customer", "Customer Added")
+            values = tuple([customer_name,]+i)
+            print(values)
+            if self.my_db.iud(qry, values):
+                messagebox.showinfo("Saved", "Order saved in database")
+                return True
             else:
-                messagebox.showerror("Error", "Customer cannot be added")
-        print(self.orders)
-        '''if clickButton(self):
-            return True
-        else:
-            return False
-            # if customer.add_customer(customer_id, customer_name, email, contact):
-            # messagebox.showinfo("Customer", "Customer Added")
-            # else:
-            # messagebox.showerror("Error", "Customer cannot be added")'''
+                return False
+
+
+
+
+
+        #     for line in self.product_tree.get_children():
+        #         order = []
+        #         for value in self.product_tree.item(line)['values']:
+        #             order.append(value)
+        #             self.orders.append(order)
+        #     print(self.orders)
+        #     if self.add_order("order_id", "name", "type", "company", "cost"):
+        #         messagebox.showinfo("Customer", "Customer Added")
+        #     else:
+        #         messagebox.showerror("Error", "Customer cannot be added")
+        # print(self.orders)
+
 
     def clickButton(self):
         customer_name = self.name.get()
@@ -148,8 +140,10 @@ class AddSales:
 
     def productAdd(self):
         if self.opt.get() != "":
-            print(self.opt.get())
-            self.product_tree.insert("", "end", text="a", values=self.products[self.opt.get()])
+            a=self.products[self.opt.get()]
+            print(a)
+            self.orders.append(a)
+            self.product_tree.insert("", "end", text="a", values=a)
             messagebox.showinfo("Product", "Product added to cart for order")
 
         else:
@@ -157,4 +151,3 @@ class AddSales:
 
 
 
-AddSales()

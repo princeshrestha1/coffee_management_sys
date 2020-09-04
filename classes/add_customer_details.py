@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
-from customers import *
-from customers import Customer
+from classes.customers import *
+from classes.customers import Customer
 
 mywindowd = Tk()
 mywindowd.geometry("560x600")

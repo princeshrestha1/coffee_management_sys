@@ -1,22 +1,17 @@
 from database import *
 
+from database import MyDb
 
 class User:
-
-    def __init__(self, un, pw, t, n):
-
-        self.db = MyDb()
-
-    def register(self, un, pw, t, n):
-        qry = """INSERT INTO users (username, password, type, name) VALUES (%s,%s,%s,%s)"""
-        values = (un, pw, t, n)
-        return self.db.iud()
+    # def __init__(self, un, pw):
+    #     self.db = MyDb()
 
     def login(self, un, pw):
+        self.db = MyDb()
         qry = """SELECT * FROM users WHERE username = %s AND password = %s"""
         # values = (self.__username, self.__password)
         values = (un, pw)
-        user = self.db.show_data_p(qry, values)
+        user = self.db.show_data_product(qry, values)
         if len(user) > 0:
             return True
         else:

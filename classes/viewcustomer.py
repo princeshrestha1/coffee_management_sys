@@ -8,7 +8,6 @@ class View:
     """ View
             This class is declared for vieweing the details of customer
     """
-
     def __init__(self):
         mainwindow = Tk()
         mainwindow.config(background="#e0e0e0")
@@ -27,12 +26,9 @@ class View:
         self.my_cursor = self.my_connection.cursor()
         self.my_cursor.execute(sql)
         results = self.my_cursor.fetchall()
-        # print(results)
         for i in results:
-            # print(i)
             self.customer_details.append(i)
 
-        # print(self.customer_details)
         self.allcustomers_window()
         self.wn.mainloop()
 
@@ -88,6 +84,4 @@ class View:
             count += 1
 
         new.mainloop()
-
-
 

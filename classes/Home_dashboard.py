@@ -1,10 +1,12 @@
 from tkinter import *
 import viewcustomer
 import view_sales
+from add_sales import AddSales
+from add_product import ProductView
 
 class Home:
-    def __init__(self, window):
-        self.win = window
+    def __init__(self):
+        self.win =Tk()
         self.win.geometry("600x565")
         self.win.title("Coffee Management System Dashboard")
         self.win.resizable(False, False)
@@ -25,17 +27,14 @@ class Home:
                activeforeground="white", state=ACTIVE,
                width="34",
                height="2").place(x=90,
-                                 y=180)  # add_sales bata sales garna sakne window banaunxau jasma customer name ra id details add garinxa,
-        # then add garesi arko win khulxa ra tesma choose product option aaunxa , choose garesi automatically sab product details tree view ma show hunxa
-        # ra save order button rakhnu parxa, save order click garesii yo products haru databse ma store hunuparxa
+                                 y=180)
 
         Button(self.win, text="View Sales", command=self.viewsale, font=("Times New Roman", 16), bg="#735039", fg="white",
                activebackground="#735039",
                activeforeground="white", state=ACTIVE,
                width="34",
                height="2").place(x=90, y=260)
-        # sales details choose garesi sab customer ko sales record with their order tree view ma show hune ra each ko view order action button rakhne
-        # jasle tyo customer ko order haru view hos another win ma with total cost
+
         Button(self.win, text="Add Customer", command= self.cusdepage, font=("Times New Roman", 16), bg="#735039", fg="white",
                activebackground="#735039",
                activeforeground="white", state=ACTIVE,
@@ -50,7 +49,6 @@ class Home:
 
     def adproduct(self):
         # import add_product
-        from add_product import ProductView
         ProductView()
 
     def cusdepage(self):
@@ -60,11 +58,13 @@ class Home:
         viewcustomer.View()
 
     def adsales(self):
-        from add_sales import AddSales
         AddSales()
 
     def viewsale(self):
         view_sales.SaleDetails()
+
+
+
 
 
 

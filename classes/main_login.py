@@ -1,7 +1,9 @@
 from tkinter import *
-import os
-from tkinter import messagebox as m_box
+from tkinter import messagebox
 import Home_dashboard
+from users import User
+from add_product import ProductView
+from Home_dashboard import Home
 
 
 
@@ -67,21 +69,19 @@ l1 = Login()
 
 
 def loginverification():
-    username = username_verify.get()
-    password = pwd_verify.get()
-    e1.delete(0, END)
-    e2.delete(0, END)
-
-    if username == 'admin' and password == 'admin':
-        loginissucess()
-
-    elif password != 'admin':
-        wrongpassword()
+    usr = User()
+    logged_user = usr.login(username_verify.get(), pwd_verify.get())
+    if logged_user:
+        messagebox.showinfo('Success', 'Login verified')
+        loginwin.destroy()
+        global mainwindow
+        mainwindow.destroy()
+        #new_vim = Tk()
+        #loginissucess()
+        Home()
 
     else:
-        print("user not found")
-        usernotregistered()
-
+        messagebox.showerror('Error', 'Incorrect password and username')
 
 
 def loginissucess():

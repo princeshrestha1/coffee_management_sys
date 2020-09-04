@@ -1,4 +1,4 @@
-from database import MyDb
+from classes.database import MyDb
 
 
 class Products:
@@ -6,13 +6,13 @@ class Products:
         self.my_db = MyDb()
 
 
-    def add_products(self,name, type, cost, company):
-        qry = "INSERT INTO products (name,type,cost, company) VALUES (%s,%s,%s,%s)"
-        values = (name, type, cost, company)
-        if self.my_db.iud(qry, values):
-            return True
-        else:
-            return False
+    # def add_products(self,name, type, cost, company):
+    #     qry = "INSERT INTO products (name,type,cost, company) VALUES (%s,%s,%s,%s)"
+    #     values = (name, type, cost, company)
+    #     if self.my_db.iud(qry, values):
+    #         return True
+    #     else:
+    #         return False
 
     def show_products(self):
         qry = "SELECT * FROM products"
