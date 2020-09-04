@@ -1,8 +1,8 @@
 from tkinter import *
 import viewcustomer
 import view_sales
-from add_sales import AddSales
-from add_product import ProductView
+from classes.add_sales import AddSales
+from classes.add_product import ProductView
 
 class Home:
     def __init__(self):

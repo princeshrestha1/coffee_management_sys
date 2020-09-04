@@ -1,9 +1,9 @@
 from tkinter import *
 from tkinter import messagebox
-import Home_dashboard
-from users import User
-from add_product import ProductView
-from Home_dashboard import Home
+import classes.Home_dashboard
+from classes.users import User
+from classes.add_product import ProductView
+from classes.Home_dashboard import Home
 
 
 

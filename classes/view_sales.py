@@ -1,4 +1,3 @@
-# yesma chai order add vako show huney banaune
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox

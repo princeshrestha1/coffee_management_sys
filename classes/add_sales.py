@@ -5,7 +5,7 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 from tkinter.ttk import Combobox
-from database import *
+from classes.database import *
 
 
 
@@ -109,23 +109,6 @@ class AddSales:
             else:
                 return False
 
-
-
-
-
-        #     for line in self.product_tree.get_children():
-        #         order = []
-        #         for value in self.product_tree.item(line)['values']:
-        #             order.append(value)
-        #             self.orders.append(order)
-        #     print(self.orders)
-        #     if self.add_order("order_id", "name", "type", "company", "cost"):
-        #         messagebox.showinfo("Customer", "Customer Added")
-        #     else:
-        #         messagebox.showerror("Error", "Customer cannot be added")
-        # print(self.orders)
-
-
     def clickButton(self):
         customer_name = self.name.get()
 
@@ -148,6 +131,5 @@ class AddSales:
 
         else:
             messagebox.showerror("Error", "Product not added")
-
 
 

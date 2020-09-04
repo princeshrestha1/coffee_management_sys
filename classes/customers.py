@@ -13,11 +13,3 @@ class Customer:
         else:
             return False
 
-    '''def show_items(self):
-        qry = "SELECT * FROM customer details"
-        items_data = self.my_db.show_data(qry)
-        return items_data
-        # if len(items_data) > 0:
-        #     return True
-        # else:
-        #     return False'''

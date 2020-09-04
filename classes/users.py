@@ -1,6 +1,6 @@
-from database import *
+from classes.database import *
 
-from database import MyDb
+from classes.database import MyDb
 
 class User:
     # def __init__(self, un, pw):

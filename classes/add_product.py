@@ -95,9 +95,6 @@ class ProductView:
         self.selected_row = self.product_tree.item(selected_row, 'text')
         selected_data = self.product_tree.item(selected_row, 'values')
 
-
-
-
         self.entry_name.delete(0, END)
         self.entry_name.insert(0, selected_data[1])
 
