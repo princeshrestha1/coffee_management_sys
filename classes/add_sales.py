@@ -50,13 +50,13 @@ class AddSales:
         self.chooseProduct.place(x=10, y=100)
         self.products_names = ['espresso','capacuino', 'black', 'latte', 'mocha','macchiato', 'flat white']
         self.products = {
-            'espresso': ["espresso", "coffee", '450', 'nescafe'],
+            'espresso': ["espresso", "coffee", '450', 'himalayan'],
             'capacuino': ["capacuino", "coffee", '480', 'lavazza'],
             'black': ["black", "coffee", '380', 'maxwell'],
             'latte': ["latte", "coffee", '420', 'caribou'],
             'mocha': ["mocha", "coffee", '510', 'tim horton'],
             'macchiato': ["macchiato", "coffee", '518', 'folger classic'],
-            'flat white': ["flat white", "coffee", '520', 'folger classic']
+            'flat white': ["flat white", "coffee", '520', 'nescafe']
 
 
         }

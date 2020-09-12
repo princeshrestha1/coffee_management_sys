@@ -3,8 +3,6 @@ from classes.database import *
 from classes.database import MyDb
 
 class User:
-    # def __init__(self, un, pw):
-    #     self.db = MyDb()
 
     def login(self, un, pw):
         self.db = MyDb()

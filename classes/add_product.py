@@ -1,8 +1,8 @@
 from tkinter import *
 from tkinter import messagebox
 from tkinter import ttk
-from database import MyDb
-from coffee_product import Products
+from classes.database import MyDb
+from classes.coffee_product import Products
 
 
 
@@ -16,7 +16,7 @@ class ProductView:
         self.win.config(background="#dabc98")
         self.product = Products()
         self.selected_row = ""
-        # self.row = []
+
 
         self.label_name = Label(self.win, text="Product Name:", bg="#dabc98")
         self.label_name.grid(row=0, column=0)
@@ -85,8 +85,8 @@ class ProductView:
         self.product_tree.column("company", width=120)
         self.product_tree.bind("<Double-1>", self.on_select)
 
-
-        self.show_all_products()
+        self.products = []
+        self.fetch_products()
 
         self.win.mainloop()
 
@@ -94,6 +94,7 @@ class ProductView:
         selected_row = self.product_tree.selection()
         self.selected_row = self.product_tree.item(selected_row, 'text')
         selected_data = self.product_tree.item(selected_row, 'values')
+        self.selected_row = selected_data[0]
 
         self.entry_name.delete(0, END)
         self.entry_name.insert(0, selected_data[1])
@@ -113,6 +114,7 @@ class ProductView:
         qry = "INSERT INTO products (name,type,cost, company) VALUES (%s,%s,%s,%s)"
         values = (self.entry_name.get(),self.entry_type.get(),self.entry_cost.get(),self.entry_company.get())
         self.my_db.iud(qry, values)
+
         self.show_all_products()
         messagebox.showinfo("product", "Products added successfully")
 
@@ -122,11 +124,13 @@ class ProductView:
         type = self.entry_type.get()
         cost = self.entry_cost.get()
         company = self.entry_company.get()
+
         if self.product.update_products(self.selected_row, name, type, cost, company):
-            messagebox.showinfo("Item", "Item Updated")
             self.show_all_products()
+            messagebox.showinfo("Item", "Item Updated")
         else:
             messagebox.showerror("Error", "Item cannot be Updated")
+
 
     def click_product(self, event):
         try:
@@ -135,38 +139,47 @@ class ProductView:
             pass
 
     def delete_products(self):
-        qry = '''delete from products WHERE name=%s'''
-        values = (self.entry_name.get(),)
+        qry = '''delete from products WHERE id=%s'''
+        values = (self.selected_row)
         self.my_db.iud(qry, values)
         self.show_all_products()
-        messagebox.showinfo("delete","Product deleted")
+        messagebox.showinfo("delete", "Product deleted")
 
 
 
-    def show(self):
-        self.product_tree.delete(*self.product_tree.get_children())
-        data = self.my_db.show_products
+    # def show(self):
+    #     self.product_tree.delete(*self.product_tree.get_children())
+    #     data = self.my_db.show_products
 
-    def search_product(self):  # searching
-        qry = '''(select * from products where id=%s)'''
-        values = (self.entry_product.get(),)
-        a = self.my_db.show_data_product(qry, values)
-        if len(a) != 0:
+    def search_product(self):
+        searched = []
+        for product in self.products: #linear search algorithm O(n)
+            if str(product[0]) == self.entry_product.get():
+                searched.append(product)
+
+        if len(searched) != 0:
             self.product_tree.delete(*self.product_tree.get_children())
-            for row in a:
+            for row in searched:
                 self.product_tree.insert('', END, values=row)
         else:
             messagebox.showerror('Error', 'Enter Correct ID', parent=self.win)
 
     def show_all_products(self):
-        qry = '''(select * from products)'''
+        self.products = []
+        self.fetch_products()
+        if len(self.products) != 0:
+            self.product_tree.delete(*self.product_tree.get_children())
+            for row in self.products:
+                self.product_tree.insert('', END, values=row)
+
+    def fetch_products(self):
+        qry = "select * from products;"
         rows = self.my_db.show_data(qry)
+        self.products = rows
         if len(rows) != 0:
             self.product_tree.delete(*self.product_tree.get_children())
             for row in rows:
                 self.product_tree.insert('', END, values=row)
-
-
 
     def validate(self):
         name = self.entry_name.get()
@@ -182,3 +195,5 @@ class ProductView:
             return False
         else:
             return True
+
+

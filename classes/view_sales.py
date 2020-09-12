@@ -54,7 +54,7 @@ class SaleDetails:
     def create_win(self, order):
         new = Tk()
         new.title("sale orders")
-        new.geometry('600x325')
+        new.geometry('600x360')
         new.config(background="#e0e0e0")
         main_title = Label(new, text="Details About order", font=("Times New Roman", 16, "underline"),
                            bg="#d19063",
@@ -63,9 +63,10 @@ class SaleDetails:
                            , width="46",
                            height="2").place(x=18, y=20)
 
-        details_line = ['Customer ID', 'Name', 'Email', 'Contact', "Cost"]
+        details_line = ['Customer ID', 'Name', 'Products', 'Type', 'Company', 'Cost']
         y = 100
-        count = 1
+        count = 0
+        # print(order)
         for details in order:
             Label(new, text=details_line[count], font=("Times New Roman", 16), bg="#735039", fg="white",
                   activebackground="#735039",
@@ -80,5 +81,6 @@ class SaleDetails:
             count += 1
 
         new.mainloop()
+
 
 

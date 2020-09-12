@@ -33,6 +33,7 @@ class MyDb:
         try:
             self.my_cursor.execute(qry)
             data = self.my_cursor.fetchall()
+            print(data)
             return data
         except Exception as e:
             print(e)

@@ -20,7 +20,7 @@ class Products:
         return products_data
 
     def update_products(self, row, name, type, cost, company):
-        qry = "UPDATE products SET name = %s, type = %s, cost = %s, company = %s WHERE id = %s"
+        qry = "UPDATE products SET name=%s, type=%s, cost=%s, company=%s WHERE id=%s;"
         values = (name, type, cost, company, row)
         self.my_db.iud(qry, values)
         return True
